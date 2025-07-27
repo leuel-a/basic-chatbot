@@ -10,6 +10,7 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.memory import InMemorySaver
+from langchain_core.runnables import RunnableConfig
 from langchain_tavily import TavilySearch
 from dotenv import load_dotenv
 
@@ -83,7 +84,7 @@ graph_builder.add_conditional_edges(
 
 graph = graph_builder.compile(checkpointer=memory)
 
-config = {'configurable': {'thread_id': '1'}}
+config: RunnableConfig = {'configurable': {'thread_id': '1'}}
 
 def stream_graph_updates(user_input: str):
     events = graph.stream(
