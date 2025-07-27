@@ -1,3 +1,4 @@
 # Basic Chatbot with LangGraph
 
-This is my first project on how to create AI Agents with LangGraph, LangChain, and LangSmith.
+This is a very simple terminal based chatbot that uses LangGraph for communication with LLM models.
+

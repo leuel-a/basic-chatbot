@@ -59,7 +59,6 @@ dist/
 
 # Local env vars
 .env
-.env.*
 
 # Database files
 *.sqlite3
